@@ -14,3 +14,5 @@ console.log(gameName.split("-", 1))
 
 console.log(gameName.toString())
 console.log(gameName.valueOf())
+
+console.log(name.slice(1, -4))
