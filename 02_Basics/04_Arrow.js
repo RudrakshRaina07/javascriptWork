@@ -11,6 +11,11 @@ const tea = () => {
     console.log(this)
 }
 
+const tea2 = (name) => {
+    return this.name;
+}
+console.log(tea2('rudr'));
+
 // tea();
 
 const addNum = (num1, num2) => {
