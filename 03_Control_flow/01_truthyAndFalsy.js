@@ -23,7 +23,7 @@ const User = {}
     
 // }
 
-//  NULLISH COALESCING OPERATOR (??): null , undefined
+//  ------------ NULLISH COALESCING OPERATOR (??): null , undefined ----------- 
 
 let val1;
 // val1 = null ?? 10;
