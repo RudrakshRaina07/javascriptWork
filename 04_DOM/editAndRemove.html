@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove</title>
+</head>
+<body>
+    <ul>
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('ul').append(li)
+    }
+
+    addLang("c++")
+
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.append(document.createTextNode(langName))
+        document.querySelector('ul').append(li)
+    }
+    addOptiLang("typescript")
+    addOptiLang("python")
+
+    // EDIT
+    const secLi = document.querySelector('li:nth-child(2)')
+    // secLi.innerHTML = "golang"
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "Ruby"
+    secLi.replaceWith(newLi)
+
+    const firstLi = document.querySelector('li:first-child')
+    firstLi.outerHTML = '<li>c++</li>'
+
+    // REMOVE
+    const lastli = document.querySelector('li:last-child')
+    lastli.remove()
+
+</script>
+</html>
