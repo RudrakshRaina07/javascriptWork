@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body>
+    <div class="card">
+        <img src="" class="image" />
+        <h3 class="follower"></h3>
+        <button id="getData">Get data</button>
+    </div>
+</body>
+<script>
+    const url = "https://api.github.com/users/hiteshchoudhary"
+    const xhr = new XMLHttpRequest()
+
+
+
+    document.querySelector("#getData").addEventListener('click', function(){
+        xhr.open('GET', url);
+        xhr.onreadystatechange = function(){
+        console.log(this.responseText);
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText)
+                document.querySelector('.image').src = data.avatar_url
+                document.querySelector('h3').innerHTML = data.followers
+            }
+        }
+        xhr.send()
+    })
+</script>
+</html>
