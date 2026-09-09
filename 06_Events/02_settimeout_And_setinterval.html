@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval and setTimeout</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalClear;
+    // const start = function(){
+    //         intervalClear = setInterval(function(){
+    //             console.log("Function started");
+                
+    //         },1000)
+    // }
+
+    // document.querySelector('#start').addEventListener('click', start)
+
+    // const stop = function(){
+    //     clearInterval(intervalClear)
+    // }
+
+    // document.querySelector('#stop').addEventListener('click', stop)
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'PYTHON'
+    }
+
+    const start = setTimeout(changeText, 3000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(start)
+        console.log("StoppedR");
+        
+    })
+
+</script>
+</html>
